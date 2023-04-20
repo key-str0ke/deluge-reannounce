@@ -24,7 +24,19 @@ python2 deluge_reannounce.py <torrent_id> <torrent_name> <torrent_path>
 
 Replace `<torrent_id>`, `<torrent_name>`, and `<torrent_path>` with the appropriate values for your torrent.
 
-<br>
+or
+
+Use the following shell script for logging:
+
+```
+#!/bin/bash
+
+torrentid="$1"
+torrentname="$2"
+torrentpath="$3"
+
+python2 deluge_reannounce.py "$torrentid" "$torrentname" "$torrentpath" >> ~/logs/deluge_reannounce.log
+```
 
 ## Configuration
 
@@ -42,5 +54,3 @@ password = "password"  # Change this to your Deluge password
 ## How It Works
 
 The script connects to the Deluge RPC client and goes through a loop with a maximum number of iterations (configurable). It sleeps for a specified interval between iterations and then checks the torrent information, including the tracker status and seed information. If the script finds seeds or specific tracker issues, it will force a reannounce to improve the chances of downloading the torrent.
-
-
