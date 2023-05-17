@@ -19,7 +19,7 @@ pip install deluge-client
 Use the following command to run the script:
 
 ```
-python2 deluge_reannounce.py <torrent_id> <torrent_name> <torrent_path>
+python deluge_reannounce.py <torrent_id> <torrent_name> <torrent_path>
 ```
 
 Replace `<torrent_id>`, `<torrent_name>`, and `<torrent_path>` with the appropriate values for your torrent.
@@ -35,7 +35,7 @@ torrentid="$1"
 torrentname="$2"
 torrentpath="$3"
 
-python2 deluge_reannounce.py "$torrentid" "$torrentname" "$torrentpath" >> ~/logs/deluge_reannounce.log
+python deluge_reannounce.py "$torrentid" "$torrentname" "$torrentpath" >> ~/logs/deluge_reannounce.log
 ```
 
 ## Configuration

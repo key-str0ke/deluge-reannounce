@@ -1,7 +1,8 @@
-#!/usr/bin/env python2
+#!/usr/bin/env python
 
 # pip install deluge-client
 
+from __future__ import print_function
 import sys
 import time
 from deluge_client import DelugeRPCClient
